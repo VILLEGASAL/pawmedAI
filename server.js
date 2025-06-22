@@ -5,6 +5,7 @@ dotenv.config()
 import express from "express";
 import cors from "cors";
 import { mainRoute } from "./routes/main_route.js";
+import { authRoute } from "./routes/auth.js";
 
 const app = express();
 
@@ -21,6 +22,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.use('/', mainRoute);
+app.use('/auth', authRoute);
 
 app.listen(process.env.PORT || 3000, () => {
 
