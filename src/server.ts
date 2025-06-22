@@ -4,8 +4,8 @@ dotenv.config()
 
 import express from "express";
 import cors from "cors";
-import { mainRoute } from "./routes/main_route.js";
-import { authRoute } from "./routes/auth.js";
+import { mainRoute } from "./routes/main_route";
+import { authRoute } from "./routes/auth";
 
 const app = express();
 
